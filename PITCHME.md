@@ -5,7 +5,7 @@
 
 ## $ whoami
 
-![](assets/gopher.png | height=300)
+<img src="assets/gopher.png" height="300px" />
 
 * @AidHamza
 * Software engineer @Schibsted Media Group
