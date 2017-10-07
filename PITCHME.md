@@ -5,7 +5,7 @@
 
 ## $ whoami
 
-<img src="assets/gopher.png" height="300px" />
+<img src="assets/gopher.png" height="230px" />
 
 * @AidHamza
 * Software engineer @Schibsted Media Group
