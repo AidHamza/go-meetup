@@ -1,5 +1,5 @@
 # Hello Go!
-## Follow me @AidHamza
+## @AidHamza
 
 ---
 
