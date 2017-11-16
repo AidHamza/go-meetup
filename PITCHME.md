@@ -10,8 +10,7 @@
 * @AidHamza
 * Software engineer @Schibsted Media Group
 
-<img src="https://devoxx.ma/assets/images/logos/logo.png" />
-<img src="https://i.forbesimg.com/media/lists/companies/schibsted-asa_416x416.jpg" />
+<img src="https://programminghints.com/wp-content/uploads/2016/01/devoxx-artikelbild.png" width="230px" />
 
 ---
 
