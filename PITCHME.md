@@ -174,17 +174,6 @@ download and install packages and dependencies
 * you can install packages like pip, gem, cpan(m)...
 * you can install binary created from Go
 
----
-
-## Go Routines & Channel
-
-A goroutine is a lightweight thread managed by the Go runtime.
-<img src="http://divan.github.io/demos/gifs/hello.gif" height="300px" />
-
-+++
-
-Channels are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another goroutine.
-
 +++
 
 ### `go get`
@@ -268,6 +257,17 @@ func TestUnit(t *testing.T) {
 @[2-9](define test values)
 @[10-16](test the values)
 @[6-8](if you want to add some test patterns, you can add easily)
+
+---
+
+## Go Routines & Channel
+
+A goroutine is a lightweight thread managed by the Go runtime.
+<img src="http://divan.github.io/demos/gifs/hello.gif" height="300px" />
+
++++
+
+Channels are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another goroutine.
 
 ---
 
