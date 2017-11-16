@@ -179,7 +179,7 @@ download and install packages and dependencies
 ## Go Routines & Channel
 
 A goroutine is a lightweight thread managed by the Go runtime.
-<img src="http://divan.github.io/demos/gifs/hello.gif" height="500px" />
+<img src="http://divan.github.io/demos/gifs/hello.gif" height="300px" />
 
 +++
 
