@@ -10,6 +10,9 @@
 * @AidHamza
 * Software engineer @Schibsted Media Group
 
+<img src="https://devoxx.ma/assets/images/logos/logo.png" />
+<img src="https://i.forbesimg.com/media/lists/companies/schibsted-asa_416x416.jpg" />
+
 ---
 
 ## Golang
