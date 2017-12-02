@@ -1,11 +1,11 @@
-# Hello Go!
+# Go Web Server!
 ## @AidHamza
 
 ---
 
 ## $ whoami
 
-<img src="assets/gopher.png" height="230px" />
+<img src="07-10-2017/assets/gopher.png" height="230px" />
 
 * @AidHamza
 * Software engineer @Schibsted Media Group
@@ -236,3 +236,7 @@ I would like to thank Avito.ma for the community support, and trying to provide 
 
 Work with us ?
 https://www.avito.ma/emploi
+
+---
+
+## Thank you!
