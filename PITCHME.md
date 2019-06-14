@@ -1,5 +1,7 @@
-# Go Web Server!
-## @AidHamza
+# Hello World;
+## Let's discover Golang 
+
+Hamza AID, Barcelona, Schibsted Media Group
 
 ---
 
@@ -11,16 +13,23 @@
 * Software engineer @Schibsted Media Group
 
 ---
-
-## References
-
-https://github.com/AidHamza/go-meetup
-
-* Previous Presentations
-* Demo Source Code
+- Created in 2007, launched in 2009 by Roke pike at Google
+- Its not object-oriented programming or functional programming
+- Highly strict
+- Concurrency
+- Native HTTP support
+- Highly performante
+- Compiled & Cross platform
 
 ---
-
+### Interesting features
+- Cool Package system
+- Concurrency: goroutines and channels
+- Integrated testing kit
+---
+### Let's discover
+#### Hello world app
+---
 ## Go Web Server
 
 +++
@@ -136,30 +145,28 @@ http package is composable, it is very easy to create re-usable pieces of code a
 Serving endpoints is nice, but often there’s functionality you need to run for every request before the actual endpoint’s handler is run. For example, access logging. A middleware component is one which implements http.Handler, but will actually pass the request off to another http.Handler after doing some set of actions.
 
 ---
+### Concurency + Queueing turn
 
-## Go Templates
-
-Most of the modern programming languages implements a templating package / library; Golang has a very powerful template package.
-
-Templates are executed by applying them to a data structure. Annotations in the template refer to elements of the data structure (typically a field of a struct or a key in a map) to control execution and derive values to be displayed.
-
-Reference : https://golang.org/pkg/text/template/
+#### Queuing excels at
+- Decoupling
+- Redundancy (Escape the fail)
+- Scalability
+- Resiliency (Failover easily when infra fails)
+- Ordering Guarantees (Maybe FIFO)
+- Asynchronous Communication
 
 +++
-
-### Example
-
-Let's demo an email template example
-
----
 
 ## Go Routines to create Worker Pools
 
 In this chapter, we will discover how to do concurrent tasks the right way.
 Handling and running Go Routines is not an easy task, its complex how to manage the routine state, the resources you have, and syncronize between those routines.
 
-+++
+#### Thread pool in Go
 
+Worker pools are a model in which a fixed number of n workers (implemented in Go with goroutines) work there way through n tasks in a work queue (implemented in Go with a channel). Work stays in a queue until a worker finishes up its current task and pulls a new one off.
+
++++
 ### Thread Pool
 
 Thread pool is a design pattern aiming to achieve tasks concurrency execution in our programs.
@@ -167,13 +174,11 @@ Thread pool is a design pattern aiming to achieve tasks concurrency execution in
 a Thread Pool contains multiple threads waiting to execute tasks
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Thread_pool.svg/580px-Thread_pool.svg.png">
-
 +++
 
-#### Thread pool in Go
+### Example
 
-Worker pools are a model in which a fixed number of m workers (implemented in Go with goroutines) work there way through n tasks in a work queue (implemented in Go with a channel). Work stays in a queue until a worker finishes up its current task and pulls a new one off.
-
+Let's demo some Go routines and channels
 
 +++
 
@@ -208,12 +213,58 @@ func main() {
 ```
 
 ---
+### Let's play now with
+#### Golang plugins
 
++++
+- Released in 1.8
+- Add Go code at runtime
+- Works only on linux for now
+- Based on C's `dlfcn.h` (dynamic linking) with `cgo`
+- See [`src/plugin/plugin_dlopen.go`](https://tip.golang.org/src/plugin/plugin_dlopen.go)
++++ 
+- Extend a service with third party functions
+  - Web server
+  - Media player
+- Update behaviour at runtime
++++
+- Nothing special on the code of the plugin
+  - `-buildmode=plugin` build option
+- Creates a `.so`
++++
+## Example
 
+```
+p, err := plugin.Open("plugin.so")
 
+fs, err := p.Lookup("Transform")
+f, ok := fs.(func(image.Image) image.Image)
+
+vs, err := p.Lookup("Priority")
+v, ok = *vs.(*int)
+```
++++
+## Safety?
+
+- Plugin == safe?
+- Same rights as caller <!-- .element: class="fragment" -->
+- Check the sources of the plugins! <!-- .element: class="fragment" -->
++++
+## Stable?
+
+- Invalid `.so` file
+  - `fatal error: runtime: no plugin module data`
+- Can `panic` during execution
++++
+## Go + C?
+
+- Go plugin used in C
+  - Already done with -buildmode=shared <!-- .element: class="fragment" -->
+- C `.so` loaded in Go
+  - For now, error "no plugin module data" <!-- .element: class="fragment" -->
+
+---
 ## Any question before demo ?
-
-
 
 ---
 
@@ -228,15 +279,13 @@ Thanks Jetbrains for the continious support, and helping many communities growin
 
 ---
 
-## Avito.ma
+## References
 
-I would like to thank Avito.ma for the community support, and trying to provide all the possible help to the tech communities in Morocco.
+https://github.com/AidHamza/go-meetup
 
-<img src="https://www.avito.ma/img/logo-avito-og.png" />
-
-Work with us ?
-https://www.avito.ma/emploi
+* Previous Presentations
+* Demo Source Code
 
 ---
 
-## Thank you!
+## Gracias!

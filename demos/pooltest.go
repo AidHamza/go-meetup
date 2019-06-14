@@ -4,15 +4,21 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"sync"
 	"fmt"
+	"errors"
 )
 
 const CONCURRENCY = 2
+
+func doSomething() error {
+	return errors.New("There is an error in our program")
+}
 
 func main() {
 	tasks := []*Task{
 	NewTask(helloGophers),
 	NewTask(func() error { return nil }),
 	NewTask(func() error { return nil }),
+	NewTask(doSomething),
 	}
 
 	p := NewPool(tasks, CONCURRENCY)
@@ -32,7 +38,7 @@ func main() {
 }
 
 func helloGophers() error {
-	fmt.Printf("Hello Gophers!")
+	fmt.Printf("Hello Gophers!\n")
 	return nil
 }
 

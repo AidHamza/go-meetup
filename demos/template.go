@@ -31,7 +31,7 @@ func main() {
 		"formatAsDate": formatAsDate,
 		"urgentNote": urgentNote,
 	}
-	t := template.Must(template.New("email.tmpl").Funcs(fmap).ParseFiles("email.tmpl"))
+	t := template.Must(template.New("/Users/hamza/go-ws/src/github.com/AidHamza/go-meetup/demos/email.tmpl").Funcs(fmap).ParseFiles("/Users/hamza/go-ws/src/github.com/AidHamza/go-meetup/demos/email.tmpl"))
 	err := t.Execute(os.Stdout, createMockStatement())
 	if err != nil {
 		panic(err)
