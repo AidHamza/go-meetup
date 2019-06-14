@@ -162,6 +162,7 @@ Serving endpoints is nice, but often there’s functionality you need to run for
 In this chapter, we will discover how to do concurrent tasks the right way.
 Handling and running Go Routines is not an easy task, its complex how to manage the routine state, the resources you have, and syncronize between those routines.
 
++++
 #### Thread pool in Go
 
 Worker pools are a model in which a fixed number of n workers (implemented in Go with goroutines) work there way through n tasks in a work queue (implemented in Go with a channel). Work stays in a queue until a worker finishes up its current task and pulls a new one off.
